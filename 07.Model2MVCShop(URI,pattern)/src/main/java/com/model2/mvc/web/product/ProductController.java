@@ -4,6 +4,7 @@ import java.net.InetAddress;
 import java.util.Map;
 import java.util.Vector;
 
+import javax.servlet.ServletContext;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -17,9 +18,11 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.portlet.ModelAndView;
 
 import com.model2.mvc.common.Page;
 import com.model2.mvc.common.Search;
+import com.model2.mvc.service.domain.Parts;
 import com.model2.mvc.service.domain.Product;
 import com.model2.mvc.service.product.ProductService;
 
@@ -120,23 +123,21 @@ public class ProductController{
 		}
 		
 		
-		//조회수  
-		//user ip주소 저장
-//		InetAddress local = InetAddress.getLocalHost();
-//		String ip = local.getHostAddress();
+		//게시글 조회수
+
+		
+		
 //		
-//		Vector<String> ipVector = new Vector<String>();
-//		for(int i=0;i<=ipVector.size();i++) {
-//			
-//			if(ipVector.elementAt(i).equals(ip)) {
-//				
-//			}else {
-//				ipVector.addElement(ip);
-//			}
+//		
+//		ServletContext application = request.getServletContext();
+//		if(application.getAttribute("totalView")==null) {
+//			application.setAttribute("totalView", viewAndVisitor);
 //		}
 //		
+//		application.getAttribute("totalView");
 //		
-//		
+		
+		
 		return "forward:/product/getProduct.jsp"; 
 	}
 		
@@ -166,8 +167,6 @@ public class ProductController{
 		
 			return "redirect:/product/getProduct?prodNo="+product.getProdNo()+"&menu="+menu;
 		}
-		
-
 
 
 }

@@ -13,7 +13,7 @@ public interface ProductDAO {
 
 		// INSERT
 		public void addProduct(Product product) throws Exception ;
-
+		
 		// SELECT ONE
 		public Product getProduct(int prodNo) throws Exception ;
 

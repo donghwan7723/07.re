@@ -134,7 +134,7 @@
 
 	<c:set var="i" value="0"/>
 	<c:forEach var="product" items="${list}">
-	   <c:set var="trimTranCode" value="${fn:trim(product.proTranCode)}"/> 
+	   <c:set var="trimTranCode" value=" ${fn:trim(product.proTranCode)}"/> 
 	   
 	   <c:set var="i" value="${i+1}" />
 	   <tr class="ct_list_pop">

@@ -65,6 +65,11 @@ function history(){
 				</tr>
 				<tr>
 					<td class="Depth03">
+						<a href="/parts/addPartsView.jsp" target="rightFrame">何前惑前殿废</a>
+					</td>
+				</tr>
+				<tr>
+					<td class="Depth03">
 						<a href="/product/listProduct?sortCondition=null&menu=manage"  target="rightFrame">魄概惑前包府</a>
 					</td>
 				</tr>
